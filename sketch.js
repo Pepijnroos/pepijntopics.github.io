@@ -10,14 +10,6 @@ let shipdata = {ship:"HMS Vierth",
                           {start:[370, 545], destination:[729, 496], departure:7, arrival:9},
                           {start:[729, 496], destination:[529, 186], departure:9, arrival:12}
                         ]
-               }
-                {ship:"HMS Roos", 
-                journey: [{start:[200, 260], destination:[400, 545], departure:1, arrival:6},
-                          {start:[370, 545], destination:[729, 496], departure:7, arrival:9},
-                          {start:[729, 496], destination:[529, 186], departure:9, arrival:12}
-                        ]
-               }
-
 
 function preload(){
   shp = loadImage("ship.png");
