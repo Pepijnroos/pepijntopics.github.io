@@ -11,6 +11,10 @@ let shipdata = {ship:"HMS Vierth",
                           {start:[729, 496], destination:[529, 186], departure:9, arrival:12}
                         ]
                }
+let shipdataII = {ship:"HMS Roos", 
+                journey: [{start:[500, 260], destination:[400, 545], departure:1, arrival:6},
+                        ]
+               }
 
 
 function preload(){
@@ -21,6 +25,7 @@ function preload(){
 function setup(){
   createCanvas(800,600);
   mybubble = new Bubble(width/2, height/2, shp, shipdata);
+  mybubbleII = new Bubble(width/2, height/2, shp, shipdataII);
   image(stars, 0, 0,stars.width/2, stars.height/2);
   time = 0;
   speedoftime = 2;
@@ -34,6 +39,12 @@ function draw(){
   if (goal[0]){
     mybubble.move(mybubble.data.journey[goal[1]].destination[0], mybubble.data.journey[goal[1]].destination[1],mybubble.data.journey[goal[1]].arrival);
   } 
+  
+  mybubbleII.move(); 
+}
+
+  mybubbleII.display(); 
+}
 
   mybubble.display();
   time = timeflow(time, speedoftime);
